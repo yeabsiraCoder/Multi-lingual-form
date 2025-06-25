@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multilingual Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('am')">አማርኛ</button>
+    </div>
+
+    <h2 data-i18n="form_title">Registration Form</h2>
+
+    <form>
+      <label data-i18n="name_label" for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name"/>
+
+      <label data-i18n="email_label" for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email"/>
+
+      <label data-i18n="gender_label">Gender</label>
+      <div class="gender-options">
+        <label><input type="radio" name="gender" value="male"/> <span data-i18n="male">Male</span></label>
+        <label><input type="radio" name="gender" value="female"/> <span data-i18n="female">Female</span></label>
+      </div>
+
+      <label data-i18n="dob_label" for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob"/>
+
+      <label data-i18n="country_label" for="country">Country</label>
+      <select id="country" name="country">
+        <option value="ethiopia" data-i18n="country_ethiopia">Ethiopia</option>
+        <option value="usa" data-i18n="country_usa">USA</option>
+        <option value="canada" data-i18n="country_canada">Canada</option>
+      </select>
+
+      <label data-i18n="message_label" for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message..."></textarea>
+
+      <button type="submit" data-i18n="submit_btn">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
